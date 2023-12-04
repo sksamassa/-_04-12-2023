@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './Counter.css';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -33,15 +34,19 @@ const Counter = () => {
 
   return (
     <div className="Counter">
-      <p className="App_counter">{count}</p>
-      <button className="App__btn" onClick={handleIncrement}>
+      <h1 className="Counter_header">{count}</h1>
+      <button 
+      className="Counter__btn" 
+      onClick={handleIncrement}
+      >
         +
       </button>
 
       <button 
-      className="App__btn" 
+      className="Counter__btn" 
       onClick={handleDecrement}
-      disabled={count <= 0 ? true : false}>
+      disabled={count <= 0 ? true : false}
+      >
         -
       </button>
     </div>
